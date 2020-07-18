@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_wallet_app/ui/dashboard_page.dart';
+import 'package:mobile_wallet_app/utils/custom_theme.dart';
 
-import 'ui/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,10 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mobile Wallet',
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomePage(),
+      theme: customLightTheme(context),
+      darkTheme: customDarkTheme(context),
+      themeMode: ThemeMode.system,
+      home: DashboardPage(),
     );
   }
 }
