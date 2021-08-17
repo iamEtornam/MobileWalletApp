@@ -10,7 +10,7 @@ ThemeData customLightTheme(
   return ThemeData(
       scaffoldBackgroundColor: Colors.white,
       visualDensity: VisualDensity.adaptivePlatformDensity,
-      cursorColor: Color(0xFF0A9974),
+      textSelectionTheme: TextSelectionThemeData(cursorColor: Color(0xFF0A9974)),
       errorColor: Color(0xFFB00020),
       platform: defaultTargetPlatform,
       highlightColor: Color(0xFF0A9974).withOpacity(.5),
@@ -105,7 +105,7 @@ ThemeData customDarkTheme(
   return ThemeData(
       scaffoldBackgroundColor: Color(0xFF121212),
       visualDensity: VisualDensity.adaptivePlatformDensity,
-            cursorColor: Color(0xFF0A9974),
+          textSelectionTheme: TextSelectionThemeData(cursorColor: Color(0xFF0A9974)),
       errorColor: Color(0xFFCF6679),
       platform: defaultTargetPlatform,
       highlightColor: Color(0xFF0A9974).withOpacity(.5),
