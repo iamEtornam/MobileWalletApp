@@ -33,11 +33,11 @@ class _DashboardPageState extends State<DashboardPage> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(AntDesign.wallet), title: Text('Wallet')),
+                icon: Icon(AntDesign.wallet), label:'Wallet'),
             BottomNavigationBarItem(
-                icon: Icon(Octicons.location), title: Text('Events')),
+                icon: Icon(Octicons.location), label: 'Events'),
             BottomNavigationBarItem(
-                icon: Icon(Octicons.settings), title: Text('Settings')),
+                icon: Icon(Octicons.settings), label: 'Settings'),
           ]),
     );
   }
