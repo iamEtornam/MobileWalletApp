@@ -71,45 +71,54 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Hero(
                       tag: 'card',
-                                          child: FlatButton(
+                      child: TextButton(
                         onPressed: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (context) {
-                            return AddCardPage();
-                          },fullscreenDialog: true));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) {
+                                return AddCardPage();
+                              },
+                              fullscreenDialog: true));
                         },
                         child: Row(
                           children: [
-                            Text('Add Card'),
+                            Text(
+                              'Add Card',
+                              style: TextStyle(color: Colors.cyan),
+                            ),
                             Icon(
                               Icons.add,
                               color: Colors.cyan,
                             )
                           ],
                         ),
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 30, vertical: 10),
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 30, vertical: 10),
+                        ),
                       ),
                     ),
-                    FlatButton(
+                    TextButton(
                       onPressed: () {},
                       child: Row(
                         children: [
-                          Text('Send Money'),
+                          Text('Send Money',
+                              style: TextStyle(color: Colors.cyan)),
                           Icon(
                             Icons.arrow_forward,
                             color: Colors.cyan,
                           )
                         ],
                       ),
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 10),
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 30, vertical: 10),
+                      ),
                     )
                   ],
                 ),
